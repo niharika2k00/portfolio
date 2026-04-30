@@ -37,9 +37,9 @@ export function Experience() {
                   {role.company === "Turbot" && (
                     <div
                       aria-hidden
-                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-brand text-base font-semibold text-accent-fg shadow-md shadow-accent/25"
+                      className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-brand shadow-md shadow-accent/25"
                     >
-                      {role.company.charAt(0)}
+
                     </div>
                   )}
                   <div>

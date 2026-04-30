@@ -8,7 +8,7 @@ export type Role = {
 
 export const experience: readonly Role[] = [
   {
-    company: "Turbot",
+    company: "Turbot HQ Pvt. Ltd.",
     title: "Software Engineer",
     period: "Jul 2023 – Present",
     location: "New York, USA (Remote)",
@@ -24,9 +24,9 @@ export const experience: readonly Role[] = [
     ],
   },
   {
-    company: "Turbot",
+    company: "Turbot HQ Pvt. Ltd.",
     title: "Junior Software Engineer Intern",
-    period: "Aug 2022 – Jun 2023",
+    period: "Aug 2022 - Jun 2023",
     location: "New York, USA (Remote)",
     bullets: [
       "Contributed to Turbot's open-source CLI tools — **Steampipe** (zero-ETL SQL over cloud APIs) and **Powerpipe** (CSPM).",
@@ -35,9 +35,9 @@ export const experience: readonly Role[] = [
     ],
   },
   {
-    company: "Meliorist Developers Pvt Ltd",
+    company: "Meliorist Developers Pvt. Ltd.",
     title: "Full Stack Developer Intern",
-    period: "Jun 2021 – Apr 2022",
+    period: "Jun 2021 - Apr 2022",
     location: "Mumbai, India (Remote)",
     bullets: [
       "Engineered a **CRM tool** with Java Spring Boot, Hibernate, React, and MySQL — automated workflows and lifted customer onboarding rate by **28%** in a week.",
@@ -48,18 +48,18 @@ export const experience: readonly Role[] = [
   {
     company: "The Prodigious People",
     title: "Web Developer",
-    period: "Apr 2021 – Jun 2021",
+    period: "Apr 2021 - Jun 2021",
     location: "Remote",
     bullets: [
       "Built a **user-auth system** from scratch with React + Firebase, end-to-end.",
-      "Optimized existing codebase, reducing latency **60–70%** and contributing to **18%+** sales lift.",
+      "Optimized existing codebase, reducing latency **60-70%** and contributing to **18%+** sales lift.",
       "Built a **blogging platform** with React + Firebase — rich text editor, reverse-chronological feed, admin panel.",
     ],
   },
   {
     company: "Tawi Tech Solutions",
     title: "Frontend Developer",
-    period: "Mar 2021 – May 2021",
+    period: "Mar 2021 - May 2021",
     location: "Jammu & Kashmir, India",
     bullets: [
       "Built a responsive site for an animal NGO with React, integrating real-time Facebook and Twitter feeds.",

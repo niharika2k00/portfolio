@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 import { Card } from "./Card";
 import { Badge } from "./Badge";
 import { GithubIcon } from "@/components/icons/GithubIcon";
@@ -26,12 +27,11 @@ export function ProjectCard({ project }: { project: Project }) {
       )}
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-surface">
-        <Image
-          src={project.image}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`${BASE_PATH}${project.image}`}
           alt={`${project.title} screenshot`}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-bg/40 via-transparent to-transparent opacity-60" />
       </div>
