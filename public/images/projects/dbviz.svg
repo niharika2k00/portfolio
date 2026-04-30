@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5e5bff"/>
+      <stop offset="100%" stop-color="#7fd8e0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <g transform="translate(800,500)" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text y="-40" font-size="180" font-weight="600" fill="url(#accent)" letter-spacing="-4">dbviz</text>
+    <text y="40" font-size="36" fill="rgba(255,255,255,0.6)" letter-spacing="2">SELECT * FROM internals;</text>
+    <text y="120" font-size="22" fill="rgba(255,255,255,0.4)" letter-spacing="3">POSTGRES · GO · REACT</text>
+  </g>
+  <g stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none">
+    <rect x="100" y="100" width="120" height="80" rx="6"/>
+    <rect x="240" y="100" width="120" height="80" rx="6"/>
+    <line x1="160" y1="180" x2="160" y2="240"/>
+    <line x1="300" y1="180" x2="300" y2="240"/>
+    <rect x="120" y="240" width="220" height="60" rx="6"/>
+  </g>
+  <g stroke="rgba(127,216,224,0.3)" stroke-width="2" fill="none">
+    <rect x="1380" y="820" width="120" height="80" rx="6"/>
+    <rect x="1240" y="820" width="120" height="80" rx="6"/>
+  </g>
+</svg>

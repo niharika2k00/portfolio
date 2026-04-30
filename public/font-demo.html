@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Font Comparison — Things I've shipped.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400..900;1,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Serif+Display:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&display=swap"
+  rel="stylesheet">
+<style>
+  :root {
+    --bg: #fcfcfc;
+    --fg: #1a1a1a;
+    --muted: #737373;
+    --border: #e5e5e5;
+    --accent: #5e5bff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0c10;
+      --fg: #f5f5f5;
+      --muted: #a0a0a0;
+      --border: #2a2a2e;
+      --accent: #8987ff;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Geist', system-ui, sans-serif;
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .header p {
+    color: var(--muted);
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    margin-bottom: 1.5rem;
+    background: color-mix(in oklch, var(--bg) 70%, transparent);
+  }
+  .card .label {
+    font-family: 'Geist', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .card .label::before {
+    content: '';
+    width: 2.5rem;
+    height: 1px;
+    background: var(--accent);
+  }
+  .card .title {
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  .card .vibe {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-family: 'Geist', system-ui, sans-serif;
+  }
+
+  /* 1 */ .f1 .title { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; }
+  /* 2 */ .f2 .title { font-family: 'Playfair Display', serif; font-weight: 600; }
+  /* 3 */ .f3 .title { font-family: 'DM Serif Display', serif; font-weight: 400; }
+  /* 6 */ .f6 .title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-stretch: 95%; }
+  /* 9 */ .f9 .title { font-family: 'Geist', sans-serif; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Font comparison</h1>
+  <p>Same title rendered in 5 candidates. Pick one — tell me the number.</p>
+</div>
+
+<div class="card f1">
+  <div class="label">1 · Fraunces (italic)</div>
+  <div class="title">Things I&apos;ve shipped.</div>
+  <div class="vibe">Soft swashes, warm curves, playful. Editorial-organic.</div>
+</div>
+
+<div class="card f2">
+  <div class="label">2 · Playfair Display</div>
+  <div class="title">Things I&apos;ve shipped.</div>
+  <div class="vibe">High-contrast (thick stems / hairline horizontals). Vogue-cover dramatic.</div>
+</div>
+
+<div class="card f3">
+  <div class="label">3 · DM Serif Display</div>
+  <div class="title">Things I&apos;ve shipped.</div>
+  <div class="vibe">Chunky geometric serifs, even weight. Modern editorial book-cover.</div>
+</div>
+
+<div class="card f6">
+  <div class="label">6 · Bricolage Grotesque</div>
+  <div class="title">Things I&apos;ve shipped.</div>
+  <div class="vibe">Angular sans, sharp terminals, variable weight + width. Brutalist-startup.</div>
+</div>
+
+<div class="card f9">
+  <div class="label">9 · Geist (bold)</div>
+  <div class="title">Things I&apos;ve shipped.</div>
+  <div class="vibe">Neutral grotesque. No italic, no serif. Vercel/Linear default.</div>
+</div>
+
+</body>
+</html>
