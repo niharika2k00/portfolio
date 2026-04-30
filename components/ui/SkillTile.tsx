@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { cn } from "@/lib/cn";
+
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 type IconEntry = { slug: string; invertOnDark?: boolean };
 
@@ -70,8 +71,9 @@ export function SkillTile({ name }: { name: string }) {
       aria-label={name}
       className="group relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border/60 bg-bg/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-bg hover:shadow-lg hover:shadow-accent/15"
     >
-      <Image
-        src={`/images/skills/${entry.slug}.svg`}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`${BASE_PATH}/images/skills/${entry.slug}.svg`}
         alt={name}
         width={26}
         height={26}
@@ -79,7 +81,6 @@ export function SkillTile({ name }: { name: string }) {
           "h-6 w-6 transition-transform duration-300 group-hover:scale-110",
           entry.invertOnDark && "dark:invert"
         )}
-        unoptimized
       />
     </div>
   );

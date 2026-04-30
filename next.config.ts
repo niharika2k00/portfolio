@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   basePath: isGithubPages ? repoBase : "",
   assetPrefix: isGithubPages ? `${repoBase}/` : "",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? repoBase : "",
+  },
 };
 
 export default nextConfig;

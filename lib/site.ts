@@ -6,7 +6,7 @@ export const site = {
   location: "Bengaluru, India",
   description:
     "Software Engineer with 3+ years building microservice platforms and cloud-native architectures in Java, Spring Boot, React, Node.js, and AWS. Strong in schema design, event-driven systems, and CI/CD automation. Experienced collaborator in agile teams.",
-  url: "https://niharika2k00.github.io/Portfolio",
+  url: "https://niharika2k00.github.io/portfolio",
   ogImage: "/images/og.png",
 } as const;
 
