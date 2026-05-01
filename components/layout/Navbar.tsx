@@ -38,9 +38,10 @@ export function Navbar() {
         <nav className="flex h-16 items-center justify-between">
           <a
             href="#"
-            className="text-base font-semibold tracking-tight text-fg transition-colors hover:text-accent"
+            className="text-3xl text-fg transition-colors hover:text-accent"
+            style={{ fontFamily: "var(--font-signature)" }}
           >
-            {site.name.split(" ")[0]}
+            {site.name}
           </a>
 
           <ul className="hidden items-center gap-1 md:flex">
@@ -80,7 +81,11 @@ export function Navbar() {
               )}
               onClick={() => setMobileOpen((o) => !o)}
             >
-              {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+              {mobileOpen ? (
+                <X className="h-4 w-4" />
+              ) : (
+                <Menu className="h-4 w-4" />
+              )}
             </button>
           </div>
         </nav>

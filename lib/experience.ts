@@ -8,9 +8,9 @@ export type Role = {
 
 export const experience: readonly Role[] = [
   {
-    company: "Turbot HQ Pvt. Ltd.",
+    company: "Turbot HQ, Inc.",
     title: "Software Engineer",
-    period: "Jul 2023 – Present",
+    period: "Jul 2023 - Present",
     location: "New York, USA (Remote)",
     bullets: [
       "Cut storage costs by **~60%** by designing a **log archival pipeline** in Java Spring Boot that aggregates logs across services and writes partitioned Parquet files to S3.",
@@ -24,7 +24,7 @@ export const experience: readonly Role[] = [
     ],
   },
   {
-    company: "Turbot HQ Pvt. Ltd.",
+    company: "Turbot HQ, Inc.",
     title: "Junior Software Engineer Intern",
     period: "Aug 2022 - Jun 2023",
     location: "New York, USA (Remote)",
@@ -47,7 +47,7 @@ export const experience: readonly Role[] = [
   },
   {
     company: "The Prodigious People",
-    title: "Web Developer",
+    title: "Web Developer Intern",
     period: "Apr 2021 - Jun 2021",
     location: "Remote",
     bullets: [
@@ -58,9 +58,9 @@ export const experience: readonly Role[] = [
   },
   {
     company: "Tawi Tech Solutions",
-    title: "Frontend Developer",
+    title: "Frontend Developer Intern",
     period: "Mar 2021 - May 2021",
-    location: "Jammu & Kashmir, India",
+    location: "Remote",
     bullets: [
       "Built a responsive site for an animal NGO with React, integrating real-time Facebook and Twitter feeds.",
       "Enhanced existing projects with new features and improved overall functionality.",

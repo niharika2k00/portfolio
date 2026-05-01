@@ -5,6 +5,7 @@ const repoBase = "/portfolio";
 
 const nextConfig: NextConfig = {
   output: "export",
+  devIndicators: false,
   trailingSlash: true,
   images: { unoptimized: true },
   basePath: isGithubPages ? repoBase : "",

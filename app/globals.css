@@ -15,7 +15,7 @@
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-instrument-serif);
+  --font-serif: var(--font-serif);
 
   --radius-card: 1rem;
   --radius-pill: 9999px;
@@ -60,7 +60,6 @@
     background-color: var(--color-bg);
     color: var(--color-fg);
     font-family: var(--font-sans), system-ui, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
@@ -93,4 +92,16 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+@utility hero-glow {
+  background-image:
+    radial-gradient(circle at 20% 20%, var(--color-accent), transparent 45%),
+    radial-gradient(circle at 80% 60%, var(--color-accent-2), transparent 45%);
+}
+
+@utility contact-glow {
+  background-image:
+    radial-gradient(circle at 30% 30%, var(--color-accent), transparent 50%),
+    radial-gradient(circle at 70% 70%, var(--color-accent-2), transparent 50%);
 }

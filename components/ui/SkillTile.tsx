@@ -51,23 +51,25 @@ const ICON_MAP: Record<string, IconEntry> = {
   Copilot: { slug: "githubcopilot", invertOnDark: true },
 };
 
+const tooltip =
+  "pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap rounded-md bg-fg px-2 py-1 text-xs font-medium text-bg opacity-0 transition-opacity duration-75 group-hover:opacity-100";
+
 export function SkillTile({ name }: { name: string }) {
   const entry = ICON_MAP[name];
 
   if (!entry) {
     return (
-      <span
-        title={name}
-        className="inline-flex items-center rounded-pill border border-border/60 bg-bg/60 px-3 py-1.5 font-mono text-xs text-fg backdrop-blur-sm transition-colors hover:border-accent/50 hover:text-accent"
-      >
-        {name}
-      </span>
+      <div className="group relative inline-flex">
+        <span className="inline-flex items-center rounded-pill border border-border/60 bg-bg/60 px-3 py-1.5 font-mono text-xs text-fg backdrop-blur-sm transition-colors hover:border-accent/50 hover:text-accent">
+          {name}
+        </span>
+        <span className={tooltip}>{name}</span>
+      </div>
     );
   }
 
   return (
     <div
-      title={name}
       aria-label={name}
       className="group relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border/60 bg-bg/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-bg hover:shadow-lg hover:shadow-accent/15"
     >
@@ -82,6 +84,7 @@ export function SkillTile({ name }: { name: string }) {
           entry.invertOnDark && "dark:invert"
         )}
       />
+      <span className={tooltip}>{name}</span>
     </div>
   );
 }

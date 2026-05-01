@@ -1,7 +1,7 @@
 export const about = {
   paragraphs: [
     "I'm a **Software Engineer** with **3+ years** building **microservice platforms** and **cloud-native architectures** — Java, Spring Boot, React, Node.js, and AWS — currently at **Turbot** working on **cloud security and governance (PSPM)** tooling.",
-    "I gravitate toward **systems work**: schema design, event-driven pipelines, CI/CD automation, and chasing down performance regressions. I enjoy migrations and codebase modernization. Comfortable collaborating in **agile teams** — sprint-based delivery, cross-functional pairing, and mentoring engineers to independent ownership.",
+    "I gravitate toward systems work: schema design, event-driven pipelines, CI/CD automation, and chasing down performance regressions. I enjoy migrations and codebase modernization. Comfortable collaborating in agile teams — sprint-based delivery, cross-functional pairing, and mentoring engineers to independent ownership.",
   ],
 } as const;
 

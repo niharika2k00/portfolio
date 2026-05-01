@@ -3,6 +3,7 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Pill } from "@/components/ui/Pill";
 import { IconLink } from "@/components/ui/IconLink";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { site } from "@/lib/site";
@@ -13,16 +14,16 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-40 blur-3xl"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 20%, var(--color-accent), transparent 45%), radial-gradient(circle at 80% 60%, var(--color-accent-2), transparent 45%)",
-        }}
+        className="hero-glow pointer-events-none absolute inset-0 -z-10 opacity-40 blur-3xl"
       />
 
       <Container className="py-20 md:py-24 lg:py-28">
         <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex max-w-2xl flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+          <FadeIn
+            delay={0.1}
+            from="bottom"
+            className="flex max-w-2xl flex-col items-center gap-6 text-center lg:items-start lg:text-left"
+          >
             <Pill>Available for new opportunities</Pill>
 
             <div className="flex flex-col gap-2">
@@ -85,22 +86,22 @@ export function Hero() {
                 icon={<Mail className="h-4 w-4" />}
               />
             </div>
-          </div>
+          </FadeIn>
 
-          <div className="relative shrink-0">
+          <FadeIn delay={0.3} from="right" className="relative shrink-0">
             <div
               aria-hidden
               className="absolute -inset-6 -z-10 rounded-full opacity-60 blur-2xl bg-gradient-brand"
             />
-            <div className="relative h-56 w-56 overflow-hidden rounded-full border border-border bg-surface md:h-72 md:w-72">
-              <div
-                className="flex h-full w-full items-center justify-center bg-gradient-brand text-7xl font-medium text-accent-fg"
-                aria-label={`${site.name} avatar placeholder`}
-              >
-                {site.shortName}
-              </div>
+            <div className="relative h-56 w-56 overflow-hidden rounded-full border-2 border-border bg-surface md:h-72 md:w-72">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/profile-pic.png"
+                alt={site.name}
+                className="h-full w-full object-cover object-top"
+              />
             </div>
-          </div>
+          </FadeIn>
         </div>
       </Container>
     </section>

@@ -33,7 +33,7 @@ export function SectionHeading({
         <span className="h-px w-10 bg-accent" aria-hidden />
         <span>{eyebrow}</span>
       </div>
-      <h2 className="font-serif italic text-4xl md:text-6xl font-normal tracking-tight text-fg">
+      <h2 className="font-serif text-3xl md:text-5xl font-normal tracking-tight text-fg">
         {title}
       </h2>
       {description && (

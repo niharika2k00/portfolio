@@ -1,14 +1,14 @@
-import { ArrowUpRight } from "lucide-react";
-
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-import { Card } from "./Card";
+import { ArrowUpRight, type LucideIcon } from "lucide-react";
 import { Badge } from "./Badge";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { cn } from "@/lib/cn";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export type Project = {
   slug: string;
   title: string;
+  icon?: LucideIcon;
   tagline: string;
   description: string;
   image: string;
@@ -19,13 +19,20 @@ export type Project = {
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card
+    <div
       className={cn(
-        "group flex flex-col overflow-hidden",
-        "hover:border-accent/40 hover:bg-surface/70 hover:-translate-y-1",
-        "hover:shadow-2xl hover:shadow-accent/10"
+        "group relative flex h-full flex-col overflow-hidden rounded-2xl",
+        "border border-border/60 bg-surface/40 backdrop-blur-md",
+        "transition-all duration-300 ease-out",
+        "hover:scale-[1.015] hover:border-accent/50 hover:shadow-2xl hover:shadow-accent/15"
       )}
     >
+      {/* top gradient bar — slides in on hover */}
+      <span
+        aria-hidden
+        className="absolute inset-x-0 top-0 z-10 h-[2px] origin-left scale-x-0 bg-gradient-brand transition-transform duration-300 group-hover:scale-x-100"
+      />
+
       <div className="relative aspect-[16/10] overflow-hidden bg-surface">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -38,10 +45,11 @@ export function ProjectCard({ project }: { project: Project }) {
 
       <div className="flex flex-1 flex-col gap-4 p-6">
         <div className="flex flex-col gap-1.5">
-          <h3 className="text-xl font-semibold tracking-tight text-fg">
+          <h3 className="flex items-center gap-2 text-xl font-semibold tracking-tight text-fg">
+            {project.icon && <project.icon className="h-5 w-5 shrink-0 text-accent" />}
             {project.title}
           </h3>
-          <p className="text-sm text-accent font-mono">{project.tagline}</p>
+          <p className="font-mono text-sm text-accent">{project.tagline}</p>
         </div>
 
         <p className="text-sm leading-relaxed text-muted line-clamp-3">
@@ -79,6 +87,6 @@ export function ProjectCard({ project }: { project: Project }) {
           )}
         </div>
       </div>
-    </Card>
+    </div>
   );
 }
