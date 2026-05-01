@@ -9,6 +9,8 @@ import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { site } from "@/lib/site";
 import { socials } from "@/lib/socials";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -90,7 +92,7 @@ export function Hero() {
             <div className="relative h-56 w-56 overflow-hidden rounded-full border-2 border-border bg-surface md:h-72 md:w-72">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/profile-pic.png"
+                src={`${BASE_PATH}/images/profile-pic.png`}
                 alt={site.name}
                 className="h-full w-full object-cover object-top"
               />

@@ -5,6 +5,8 @@ const repoBase = "/portfolio";
 
 const nextConfig: NextConfig = {
   output: "export",
+  reactStrictMode: true,
+  poweredByHeader: false,
   devIndicators: false,
   trailingSlash: true,
   images: { unoptimized: true },
@@ -12,6 +14,9 @@ const nextConfig: NextConfig = {
   assetPrefix: isGithubPages ? `${repoBase}/` : "",
   env: {
     NEXT_PUBLIC_BASE_PATH: isGithubPages ? repoBase : "",
+  },
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
   },
 };
 

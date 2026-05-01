@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description: site.description,
     images: [site.ogImage],
   },
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: [{ url: "/icon.svg", type: "image/svg+xml" }] },
 };
 
 export default function RootLayout({
