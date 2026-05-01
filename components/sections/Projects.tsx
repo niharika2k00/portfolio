@@ -1,4 +1,3 @@
-import { Coffee } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProjectCard } from "@/components/ui/ProjectCard";
@@ -15,9 +14,7 @@ export function Projects() {
             title="Things I've shipped."
             description={
               <>
-                Built on too much coffee{" "}
-                <Coffee className="inline h-4 w-4 -translate-y-0.5 text-accent-3" aria-hidden />{" "}
-                and too little sleep — side projects where I went deep into streaming
+                Built on too much coffee ☕️ and too little sleep — side projects where I went deep into streaming
                 pipelines, database internals, and the systems-level rabbit holes that
                 don&apos;t fit a sprint.
               </>

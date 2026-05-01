@@ -16,7 +16,7 @@ export function IconLink({ label, icon, className, ...props }: IconLinkProps) {
       rel={isExternal ? "noopener noreferrer" : undefined}
       className={cn(
         "inline-flex h-10 w-10 items-center justify-center rounded-pill",
-        "border border-border bg-surface/50 text-muted backdrop-blur-sm",
+        "border border-border bg-surface text-muted",
         "transition-all duration-300",
         "hover:border-accent hover:bg-accent/10 hover:text-accent hover:-translate-y-0.5",
         className

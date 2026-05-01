@@ -34,9 +34,7 @@ export function Experience() {
                   aria-hidden
                   className="absolute left-0 top-1.5 flex h-5 w-5 items-center justify-center md:left-1"
                 >
-                  {idx === 0 && (
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/30 opacity-75" />
-                  )}
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/30 opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-bg" />
                 </span>
 

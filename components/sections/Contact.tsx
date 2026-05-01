@@ -29,13 +29,17 @@ export function Contact() {
                     <span className="text-gradient-brand">something good.</span>
                   </>
                 }
-                description="Open to senior backend / full-stack roles, interesting systems work, and conversations about cloud security and platform engineering."
+                description="Open to backend and full stack roles, meaningful systems challenges, and conversations around cloud security and platform engineering"
                 align="center"
               />
 
-              <Button as="a" href={socials.emailHref} variant="gradient" size="lg">
-                <Mail className="h-4 w-4" />
-                {socials.email}
+              <Button
+                as="a"
+                href={socials.emailHref}
+                variant="gradient"
+                size="lg"
+              >
+                Say hello
                 <ArrowUpRight className="h-4 w-4" />
               </Button>
 
