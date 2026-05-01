@@ -5,6 +5,7 @@ import { About } from "@/components/sections/About";
 import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { Skills } from "@/components/sections/Skills";
+import { Interests } from "@/components/sections/Interests";
 import { Contact } from "@/components/sections/Contact";
 
 // page.tsx is the ✅ STARTING POINT - for "/" route
@@ -16,6 +17,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <About />
+        <Interests />
         <Skills />
         <Experience />
         <Projects />

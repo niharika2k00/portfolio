@@ -31,7 +31,7 @@ export function Hero() {
                 — Hi, I&apos;m
               </p>
               <h1 className="text-5xl font-medium tracking-tight md:text-6xl lg:text-7xl">
-                <span className="text-gradient-brand">{site.name}</span>
+                <span className="text-gradient-name">{site.name}</span>
               </h1>
               <p className="text-2xl font-medium tracking-tight text-fg md:text-3xl">
                 {site.role}
@@ -39,13 +39,7 @@ export function Hero() {
             </div>
 
             <p className="max-w-xl text-base leading-relaxed text-muted md:text-lg">
-              Building microservice platforms and cloud-native systems
-              architectures in <span className="font-mono text-fg">Java</span>,{" "}
-              <span className="font-mono text-fg">Spring Boot</span>,{" "}
-              <span className="font-mono text-fg">Node.js</span>,{" "}
-              <span className="font-mono text-fg">React</span>, and{" "}
-              <span className="font-mono text-fg">AWS</span>. 3+ years at
-              Turbot, shipping cloud-security tooling and chasing down latency.
+              3+ years shipping cloud-native systems — microservices, event-driven pipelines, and cloud security at scale.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">

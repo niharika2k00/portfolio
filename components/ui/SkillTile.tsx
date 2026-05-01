@@ -1,15 +1,16 @@
+import type { LucideIcon } from "lucide-react";
+import { Globe } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-type IconEntry = { slug: string; invertOnDark?: boolean };
+type IconEntry = { slug: string; invertOnDark?: boolean } | { lucide: LucideIcon };
 
 const ICON_MAP: Record<string, IconEntry> = {
   Java: { slug: "java" },
   JavaScript: { slug: "javascript" },
   TypeScript: { slug: "typescript" },
   "C++": { slug: "cplusplus" },
-  C: { slug: "c" },
 
   "Spring Boot": { slug: "spring" },
   Hibernate: { slug: "hibernate" },
@@ -28,6 +29,7 @@ const ICON_MAP: Record<string, IconEntry> = {
 
   "Apache Kafka": { slug: "apachekafka", invertOnDark: true },
   GraphQL: { slug: "graphql" },
+  "REST API": { lucide: Globe },
 
   PostgreSQL: { slug: "postgresql" },
   MySQL: { slug: "mysql" },
@@ -44,7 +46,12 @@ const ICON_MAP: Record<string, IconEntry> = {
   OpenTofu: { slug: "opentofu" },
   "GitHub Actions": { slug: "githubactions" },
   Git: { slug: "git" },
+  GitHub: { slug: "github", invertOnDark: true },
   Linux: { slug: "linux" },
+
+  Jest: { slug: "jest" },
+  JUnit: { slug: "junit" },
+  Postman: { slug: "postman" },
 
   "Claude Code": { slug: "claude" },
   Cursor: { slug: "cursor", invertOnDark: true },
@@ -68,11 +75,21 @@ export function SkillTile({ name }: { name: string }) {
     );
   }
 
+  const tileClass =
+    "group relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border/60 bg-bg/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-bg hover:shadow-lg hover:shadow-accent/15";
+
+  if ("lucide" in entry) {
+    const Icon = entry.lucide;
+    return (
+      <div aria-label={name} className={tileClass}>
+        <Icon className="h-6 w-6 text-muted transition-all duration-300 group-hover:scale-110 group-hover:text-accent" strokeWidth={1.5} />
+        <span className={tooltip}>{name}</span>
+      </div>
+    );
+  }
+
   return (
-    <div
-      aria-label={name}
-      className="group relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border/60 bg-bg/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-bg hover:shadow-lg hover:shadow-accent/15"
-    >
+    <div aria-label={name} className={tileClass}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={`${BASE_PATH}/images/skills/${entry.slug}.svg`}

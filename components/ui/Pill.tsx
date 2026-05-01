@@ -5,8 +5,8 @@ export function Pill({ className, children, ...props }: HTMLAttributes<HTMLSpanE
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 rounded-pill border border-accent-3/30",
-        "bg-accent-3/15 px-3 py-1 text-xs font-medium text-accent-3",
+        "inline-flex items-center gap-2 rounded-pill border border-accent-3/40",
+        "bg-accent-3/10 px-3 py-1 text-xs font-medium text-accent-3",
         className
       )}
       {...props}

@@ -13,7 +13,7 @@ export type SkillGroup = {
 export const skillGroups: readonly SkillGroup[] = [
   {
     label: "Languages",
-    items: ["Java", "JavaScript", "TypeScript", "C++", "C"],
+    items: ["Java", "JavaScript", "TypeScript", "C++"],
   },
   {
     label: "Backend",
@@ -42,7 +42,7 @@ export const skillGroups: readonly SkillGroup[] = [
   },
   {
     label: "Microservices",
-    items: ["REST", "WebSockets", "Apache Kafka", "API Gateway", "GraphQL"],
+    items: ["REST API", "WebSockets", "Apache Kafka", "GraphQL", "API Gateway"],
   },
   {
     label: "Databases",
@@ -61,7 +61,6 @@ export const skillGroups: readonly SkillGroup[] = [
       "SNS",
       "SQS",
       "CloudWatch",
-      "Cognito",
     ],
   },
   {
@@ -72,11 +71,20 @@ export const skillGroups: readonly SkillGroup[] = [
       "OpenTofu",
       "GitHub Actions",
       "Git",
+      "GitHub",
       "Linux",
     ],
   },
   {
-    label: "AI Tools",
-    items: ["Claude Code", "Cursor", "Copilot", "OpenAI"],
+    label: "AI Tools & Testing",
+    items: [
+      "Claude Code",
+      "Cursor",
+      "Copilot",
+      "OpenAI",
+      "Postman",
+      "Jest",
+      "JUnit",
+    ],
   },
 ];
